@@ -1,6 +1,3 @@
-# TodoBot: Efficient Todo List Management using gRPC and Telegram Bot
-
-
 ## Description
 Sebuah project aplikasi todo list  menggunakan gRPC API dan protobuf untuk melakukan komunikasi antara client dan server, serta bot telegram sebagai interface untuk berkomunikasi dengan user. Aplikasi ini memungkinkan user untuk menambahkan, membaca, mengubah, dan menghapus todo list dengan mudah dan efisien melalui bot telegram. Aplikasi ini menggunakan database Firebase sebagai media penyimpanan data nya.
 
