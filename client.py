@@ -4,12 +4,12 @@ import todo_pb2_grpc
 import telegram
 from telegram.ext import CommandHandler, Updater, PicklePersistence
 
-# Inisialisasi bot telegram
-bot = telegram.Bot(token='')
-updater = Updater(token='', use_context=True)
+# inisiasi bot telegram
+bot = telegram.Bot(token='ISI TOKEN INI SESUAI DENGAN TOKEN BOTFATHER ANDA')
+updater = Updater(token='ISI TOKEN INI SESUAI DENGAN TOKEN BOTFATHER ANDA', use_context=True)
 dispatcher = updater.dispatcher
 
-# Inisialisasi client untuk mengakses TodoService
+# client untuk mengakses TodoService
 import grpc
 import todo_pb2
 import todo_pb2_grpc
