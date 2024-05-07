@@ -1,20 +1,22 @@
 ## Description
-Sebuah project aplikasi todo list  menggunakan gRPC API dan protobuf untuk melakukan komunikasi antara client dan server, serta bot telegram sebagai interface untuk berkomunikasi dengan user. Aplikasi ini memungkinkan user untuk menambahkan, membaca, mengubah, dan menghapus todo list dengan mudah dan efisien melalui bot telegram. Aplikasi ini menggunakan database Firebase sebagai media penyimpanan data nya.
+Mini project todo list merupakan implementasi dari gRPC API dan protobuf untuk interaksi atntara client dan server, juga penggunaan bot telegram sebagai interface untuk berkomunikasi dengan user. terdapat fitur yang menjadikan user lebih nyaman dan mudah dengan adanya deskripsi petunjuk penggunaan bot ini. bot ini menggunakan database Firebase dan dibantu juga dengan botfather untuk APInya.
 
-## Workflow
-- Membuat protokol dengan menggunakan protobuf (**todo.proto**) untuk mendefinisikan struktur dan format pesan yang akan dikirimkan antara client dan server
-- Menggunakan protobuf untuk menggenerate kode pada bahasa pemrograman Python yang akan digunakan untuk membuat server dan client ()
-- Membuat server (**server.py**) pada bahasa pemrograman Python yang di-generate oleh protobuf, dengan menggunakan gRPC untuk mengekspos endpoint-endpoint yang dapat diakses oleh client
-- Membuat client (**client.py**) pada bahasa pemrograman Python yang di-generate oleh protobuf, dengan menggunakan bot telegram sebagai interface untuk berkomunikasi dengan user dan mengakses endpoint-endpoint yang disediakan oleh server
-- User mengirimkan command /add, /read, /update, atau /delete pada bot telegram
-- Bot telegram mengirimkan request dengan data yang dibutuhkan ke server menggunakan protokol yang telah didefinisikan oleh protobuf
-- Server melakukan operasi CRUD pada database Firebase sesuai dengan request yang diterima, dan mengembalikan response berupa pesan bahwa operasi telah berhasil dilakukan
-- Seluruh komunikasi antara client dan server menggunakan protokol yang telah didefinisikan oleh protobuf dan diimplementasikan menggunakan gRPC, yang memastikan bahwa pesan yang dikirimkan antara client dan server memiliki format dan struktur yang sama, sehingga komunikasi dapat berjalan dengan efektif dan efisien.
+## Composition :
+* Phyton
+* JSON
 
+## Feature :
 
-## Deployment
+* Add
+* Read
+* Update
+* Delete
+* List
 
-How to run this project
+---
+## How to Start
+
+Step 1 :
 
 
 #### Install Python Libraries
@@ -22,19 +24,24 @@ How to run this project
 pip install grpcio grpcio-tools google-auth google-auth-oauthlib google-auth-httplib2 firebase-admin python-telegram-bot
 ```
 
+Step 2 :
+
 #### Compile file proto
 
 ```bash
  python -m grpc_tools.protoc -I . --python_out=. --grpc_python_out=. todo.proto
 ```
 
-#### Run Server
+Step 3 :
+
+#### jalankan Server
 
 ```bash
  python .\server.py  
 ```
-
-#### Run Client
+Step 4 :
+#### jalankan Client 
+(*Note : buka client di terminal lain)
 
 ```bash
  python .\client.py  
