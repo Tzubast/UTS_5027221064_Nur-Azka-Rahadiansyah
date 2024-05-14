@@ -4,6 +4,9 @@ Mini project todo list merupakan implementasi dari gRPC API dan protobuf untuk i
 ## Composition :
 * Phyton
 * JSON
+* Node JS
+* javascript
+* REST API
 
 ## Feature :
 
